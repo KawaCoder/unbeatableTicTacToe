@@ -2,10 +2,18 @@ import java.util.*;
 
 public class Main {
 
-    static String[] board;
+    //static
     static String turn;
     static int nbofturn = 0;
     static int winindicator;
+
+
+    static String[] copyboard;
+    /*static void initBoard(){
+        for (int a = 0; a < 9; a++) {
+            board[a] = String.valueOf(a + 1);
+        }
+    }*/
 
     // CheckWinner method will
     // decide the combination
@@ -51,7 +59,7 @@ public class Main {
         }
 
         for (int a = 0; a < 9; a++) {
-            if (Arrays.asList(board).contains(
+            if (Arrays.asList(testedboard).contains(
                     String.valueOf(a + 1))) {
                 break;
             }
@@ -147,7 +155,12 @@ public class Main {
 
             System.out.println("\nTesting the slot "+(i+1));
             if (!importedboard[i].equals("X") && !importedboard[i].equals("O")){
+                System.out.println("COPYBOARD:");
+                printBoard(copyboard);
+
                 importedboard[i]=player;
+                System.out.println("COPYBOARD:");
+                printBoard(copyboard);
                 printBoard(importedboard);
                 if (checkWinner(importedboard)==1){
                     //nodesscore = add_element(nodesscore.length, nodesscore, 1);
@@ -244,22 +257,27 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        board = new String[9];
-        String[] copyboard=board;
+        String[] board = new String[9];
+        //copyboard=board;
 
-        turn = "O";
-        String winner = null;
+
 
         for (int a = 0; a < 9; a++) {
             board[a] = String.valueOf(a + 1);
         }
-        //board[2]="X";
-        //board[1]="O";
+
+
+    turn = "O";
+    String winner = null;
+
+
+    //board[2]="X";
+    //board[1]="O";
         System.out.println("Welcome to the unbeatable Tic Tac Toe. Have a nice Defeat.\n\n");
         System.out.println("I will play first.\n");
 
 
-//first turn, play in the corner.
+    //first turn, play in the corner.
         randomstring();
         int[] arr={1, 3, 7, 9};
         Random r=new Random();
@@ -272,7 +290,6 @@ public class Main {
 //end of the first turn.
 
 
-        //test lol
 
         while (winner == null) {
             int numInput = 0;
