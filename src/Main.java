@@ -138,7 +138,7 @@ public class Main {
 
         for (int i = 0; i< (importedboard.length) ; i++) {
 
-            //System.out.println("\nTesting the slot "+(i+1));
+            System.out.println("\nTesting the slot "+(i+1));
             if (!importedboard[i].equals("X") && !importedboard[i].equals("O")){
 
                 importedboard[i]=player;
@@ -146,7 +146,7 @@ public class Main {
                 if (checkWinner(importedboard)==1){
                     //nodesscore = add_element(nodesscore.length, nodesscore, 1);
                     nodesscore[i]=nodesscore[i]+1;
-                    //System.out.println("Un point pour X"+Arrays.toString(nodesscore));
+                    System.out.println("Un point pour X"+Arrays.toString(nodesscore));
                     return i+1;
 
 
@@ -154,13 +154,13 @@ public class Main {
                 }else if (checkWinner(importedboard)==-1){
                     //nodesscore = add_element(nodesscore.length, nodesscore, -1);
                     nodesscore[i]=nodesscore[i]-1;
-                    //System.out.println("Draw"+Arrays.toString(nodesscore));
+                    System.out.println("Draw"+Arrays.toString(nodesscore));
                     return i+1;
 
                 }else if (checkWinner(importedboard)==-2){
                     //nodesscore = add_element(nodesscore.length, nodesscore, -2);
                     nodesscore[i]=nodesscore[i]+1;
-                    //System.out.println("Un point pour O"+Arrays.toString(nodesscore));
+                    System.out.println("Un point pour O"+Arrays.toString(nodesscore));
                     return i+1;
 
 
@@ -199,7 +199,6 @@ public class Main {
 
         }
 
-        System.out.println("[#] Simulation ended.");
 
         return 0;
     }
@@ -293,6 +292,7 @@ public class Main {
 
                 }
 
+                System.out.println("[#] Simulation ended.");
 
                 System.out.println("I choosed the slot "+numInput);
                 //printBoard(board);
