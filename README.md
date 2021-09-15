@@ -19,10 +19,10 @@ Unbeatable Tic Tac Toe is an AI that is unbeatable at the Tic Tac Toe.<br/>
 Well.... let's say almost because there is probably some fails...
 <br/><br/>
 ## Table of content:<br/>
-### 1. [Downloads](https://github.com/DR34M-M4K3R/unbeatableTicTacToe#downloads)<br/>
-### 2. [About the program](https://github.com/DR34M-M4K3R/unbeatableTicTacToe#about-the-program)<br/>
+### 1. [Downloads](https://github.com/DR34M-M4K3R/unbeatableTicTacToe#downloads) <br/>
+### 2. [About the program](https://github.com/DR34M-M4K3R/unbeatableTicTacToe#about-the-program) <br/>
 ### 3. [How to launch the software?](https://github.com/DR34M-M4K3R/unbeatableTicTacToe#launch-the-software)
-### 4. [How to use Anti-AFK?](https://github.com/DR34M-M4K3R/AunbeatableTicTacToe#how-to-use-anti-afk-kick-for-all-games)
+### 4. [How to use Anti-AFK?](https://github.com/DR34M-M4K3R/unbeatableTicTacToe#how-to-use-unbeatabletictactoe)
 ### 5. [Special cases and internal errors](https://github.com/DR34M-M4K3R/unbeatableTicTacToe#special-cases-and-internal-errors)
 ### 6. [Contact (24/24h)](https://github.com/DR34M-M4K3R/unbeatableTicTacToe#contact)
 
@@ -34,7 +34,7 @@ Well.... let's say almost because there is probably some fails...
 
 ## About the program
 This AI is calculating both players' all possible next turns of the game, until it finds a slot that could make itself win OR make the opponent loose.</p>
-Program made by [DR34M-M4K3R](https://github.com/DR34M-M4K3R)</p>
+Program made by [DR34M-M4K3R](https://github.com/DR34M-M4K3R) </p>
 </p>
 
 
