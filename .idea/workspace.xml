@@ -6,9 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9dd20be-6b4d-4e5d-abb0-6f3734b1bb6e" name="Changes" comment="It works! Well it can play, maybe not win...">
+    <list default="true" id="c9dd20be-6b4d-4e5d-abb0-6f3734b1bb6e" name="Changes" comment="Added the compiled jar.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/unbeatableTicTacToe_jar/unbeatableTicTacToe.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/unbeatableTicTacToe_jar/unbeatableTicTacToe.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/unbeatableTicTacToe/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/unbeatableTicTacToe/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631710555250</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added the compiled jar.">
+      <created>1631711289922</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1631711289923</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,6 +124,7 @@
     <MESSAGE value="git test" />
     <MESSAGE value="update" />
     <MESSAGE value="It works! Well it can play, maybe not win..." />
-    <option name="LAST_COMMIT_MESSAGE" value="It works! Well it can play, maybe not win..." />
+    <MESSAGE value="Added the compiled jar." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the compiled jar." />
   </component>
 </project>
