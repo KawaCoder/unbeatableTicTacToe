@@ -13,12 +13,14 @@ public class Main {
     static int winindicator;
 
 
-    static String[] copyboard;
-    /*static void initBoard(){
+    static String[] board = new String[9];
+    static String[] copyboard = new String[9];
+    /*static void initiateBoard() {
         for (int a = 0; a < 9; a++) {
             board[a] = String.valueOf(a + 1);
         }
     }*/
+
 
     // CheckWinner method will
     // decide the combination
@@ -95,27 +97,6 @@ public class Main {
     }
 */
 
-    //https://www.candidjava.com/java-examples/find-the-index-of-the-largest-number-in-an-array/
-    public static int arraymaxnumber(int[] a) {
-
-        int max = a[0];
-        int index = 0;
-        for (int i = 0; i < a.length; i++)
-        {
-            if (max < a[i])
-            {
-                max = a[i];
-                index = i;
-            }
-        }
-        System.out.println("Index position of Maximum value in an "+ Arrays.toString(a) +" is  :  " + (index+1));
-        return index+1;
-    }
-
-
-
-
-
 
     // Picking up a random string for the bot's turn.
     public static void randomstring(){
@@ -128,10 +109,9 @@ public class Main {
 
 
 
-
-    // Ai function to check all possibilities
+    // Ai method to check all possibilities
     static int ai(String[] importedboard, String player){
-        System.out.println("[#] Begging simulation...");
+        //System.out.println("[#] Begging simulation of "+player+" turn...");
         //ArrayList<Integer> nodesscore = new ArrayList<>();
 
         //System.out.println("[#] Clonage de la grille pour les tests...");
@@ -158,19 +138,15 @@ public class Main {
 
         for (int i = 0; i< (importedboard.length) ; i++) {
 
-            System.out.println("\nTesting the slot "+(i+1));
+            //System.out.println("\nTesting the slot "+(i+1));
             if (!importedboard[i].equals("X") && !importedboard[i].equals("O")){
-                System.out.println("COPYBOARD:");
-                printBoard(copyboard);
 
                 importedboard[i]=player;
-                System.out.println("COPYBOARD:");
-                printBoard(copyboard);
-                printBoard(importedboard);
+                //printBoard(importedboard);
                 if (checkWinner(importedboard)==1){
                     //nodesscore = add_element(nodesscore.length, nodesscore, 1);
                     nodesscore[i]=nodesscore[i]+1;
-                    System.out.println("Un point pour X"+Arrays.toString(nodesscore));
+                    //System.out.println("Un point pour X"+Arrays.toString(nodesscore));
                     return i+1;
 
 
@@ -178,13 +154,13 @@ public class Main {
                 }else if (checkWinner(importedboard)==-1){
                     //nodesscore = add_element(nodesscore.length, nodesscore, -1);
                     nodesscore[i]=nodesscore[i]-1;
-                    System.out.println("Draw"+Arrays.toString(nodesscore));
+                    //System.out.println("Draw"+Arrays.toString(nodesscore));
                     return i+1;
 
                 }else if (checkWinner(importedboard)==-2){
                     //nodesscore = add_element(nodesscore.length, nodesscore, -2);
                     nodesscore[i]=nodesscore[i]+1;
-                    System.out.println("Un point pour O"+Arrays.toString(nodesscore));
+                    //System.out.println("Un point pour O"+Arrays.toString(nodesscore));
                     return i+1;
 
 
@@ -215,7 +191,7 @@ public class Main {
 
             }else{
 
-                System.out.println("Cette case n'est pas vide!!");
+                //System.out.println("Cette case n'est pas vide!!");
             }
 
 
@@ -223,7 +199,7 @@ public class Main {
 
         }
 
-        System.out.println("[#] Simulation ended. X");
+        System.out.println("[#] Simulation ended.");
 
         return 0;
     }
@@ -262,8 +238,13 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        String[] board = new String[9];
-        //copyboard=board;
+        //String[] board = new String[9];
+
+        for (int a = 0; a < 9; a++) {
+            board[a] = String.valueOf(a + 1);
+        }
+        //initiateBoard();
+        //String[] copyboard=board;
 
 
 
@@ -302,18 +283,20 @@ public class Main {
 
             if (turn.equals("X")) {
 
+                System.arraycopy(board, 0, copyboard, 0, board.length);
+
                 randomstring();
-                numInput=ai(board, "X");
+                numInput=ai(copyboard, "X");
                 if (numInput==0){
-                    numInput=ai(board, "O");
+                    numInput=ai(copyboard, "O");
 
 
                 }
 
 
                 System.out.println("I choosed the slot "+numInput);
-                printBoard(board);
-                System.out.println(Arrays.toString(copyboard));
+                //printBoard(board);
+                //System.out.println(Arrays.toString(board));
                 //System.exit(0);
 
 
