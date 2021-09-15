@@ -29,7 +29,7 @@ Well.... let's say almost because there is probably some fails...
 <br/><br/>
 ## Downloads
 
-[![hey](https://img.shields.io/badge/Download%20.jar-181717?style=for-the-badge&color=red&logo=java)]()
+[![hey](https://img.shields.io/badge/Download%20.jar-181717?style=for-the-badge&color=red&logo=java)](https://github.com/DR34M-M4K3R/unbeatableTicTacToe/releases/download/1.0/unbeatableTicTacToe.jar)
 
 
 ## About the program
