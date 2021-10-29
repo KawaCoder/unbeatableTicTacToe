@@ -144,7 +144,7 @@ public class Main {
             if (!importedboard[i].equals("X") && !importedboard[i].equals("O")){
 
                 importedboard[i]=player;
-                //printBoard(importedboard);
+                printBoard(importedboard);
                 if (checkWinner(importedboard)==1){
                     //nodesscore = add_element(nodesscore.length, nodesscore, 1);
                     nodesscore[i]=nodesscore[i]+1;
@@ -157,7 +157,7 @@ public class Main {
                     //nodesscore = add_element(nodesscore.length, nodesscore, -1);
                     nodesscore[i]=nodesscore[i]-1;
                     System.out.println("Draw"+Arrays.toString(nodesscore));
-                    return i+1;
+
 
                 }else if (checkWinner(importedboard)==-2){
                     //nodesscore = add_element(nodesscore.length, nodesscore, -2);
@@ -269,7 +269,8 @@ public class Main {
         int[] arr={1, 3, 7, 9};
         Random r=new Random();
         int randomNumber=r.nextInt(arr.length);
-        int firstInput=(arr[randomNumber]);
+        //int firstInput=(arr[randomNumber]);
+        int firstInput=1;
 
         board[firstInput - 1] = "X";
         printBoard(board);
@@ -290,7 +291,6 @@ public class Main {
                 numInput=ai(copyboard, "X");
                 if (numInput==0){
                     numInput=ai(copyboard, "O");
-
 
                 }
 
@@ -360,7 +360,7 @@ public class Main {
             }
 
         }
-
+//test
         // If no one win or lose from both player x and O.
         // then here is the logic to print "draw".
         if (winner.equalsIgnoreCase("draw")) {
